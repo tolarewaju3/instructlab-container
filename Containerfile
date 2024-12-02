@@ -21,4 +21,5 @@ RUN ilab model download
 
 EXPOSE 8000
 
-# Run the container: podman run -d --name instructlab -p 8000:8000 instructlab:latest ilab model serve
+#ENTRYPOINT ["/bin/sh"]
+#Run the container: podman run -d --name instructlab -p 8000:8000 instructlab:latest ilab model serve
