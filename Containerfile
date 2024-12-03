@@ -17,9 +17,11 @@ RUN pip install instructlab --extra-index-url=https://download.pytorch.org/whl/c
 # Configure ilab
 RUN ilab config init --non-interactive
 RUN ilab model download
-RUN ilab model serve
+#RUN ilab model serve
 
 EXPOSE 8000
+
+ENTRYPOINT ["ilab", "model", "serve"]
 
 #ENTRYPOINT ["/bin/sh"]
 #Run the container: podman run -d --name instructlab -p 8000:8000 instructlab:latest ilab model serve
